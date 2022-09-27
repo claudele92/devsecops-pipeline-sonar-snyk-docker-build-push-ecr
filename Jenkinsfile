@@ -31,7 +31,7 @@ pipeline {
 	stage('Push') {
             steps {
                 script{
-                    docker.withRegistry('https://614938384999.dkr.ecr.us-east-1.amazonaws.com/asg', 'ecr:us-east-1:devsecops-credentials') {
+                    docker.withRegistry('https://614938384999.dkr.ecr.us-east-1.amazonaws.com/asg', 'ecr:us-east-1:devsecops-guru') {
                     app.push("latest")
                     }
                 }
